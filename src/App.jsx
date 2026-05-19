@@ -1,0 +1,622 @@
+import { motion } from "framer-motion";
+
+export default function ClaytikWebsite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 via-yellow-50 to-white text-gray-800 overflow-hidden">
+
+      {/* FLOATING BACKGROUND */}
+      <div className="fixed top-20 left-10 w-72 h-72 bg-orange-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+      <div className="fixed bottom-10 right-10 w-72 h-72 bg-yellow-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden min-h-screen flex items-center">
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#f59e0b20,transparent_40%)]"></div>
+
+        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
+
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT */}
+            <motion.div
+              initial={{ opacity: 0, x: -80 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+
+              <p className="uppercase tracking-[0.4em] text-orange-500 font-bold mb-6">
+                International Innovation Fair 2026
+              </p>
+
+              <h1 className="text-6xl md:text-8xl font-black leading-tight mb-6">
+                ✨ CLAYTIK
+              </h1>
+
+              <span className="block text-orange-500 text-3xl md:text-5xl font-black mb-8">
+                Create • Innovate • Sustain
+              </span>
+
+              <p className="text-xl md:text-2xl leading-relaxed text-gray-700 mb-10">
+                An eco-friendly innovation that transforms batik learning into a
+                fun, safe, and creative hands-on experience for students.
+              </p>
+
+              <div className="flex flex-wrap gap-5">
+
+                <motion.button
+                  whileHover={{
+                    scale: 1.08,
+                    boxShadow: "0px 0px 40px rgba(249,115,22,0.5)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-orange-500 hover:bg-orange-600 transition text-white px-8 py-5 rounded-2xl font-bold shadow-2xl"
+                >
+                  Explore CLAYTIK
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-100 transition px-8 py-5 rounded-2xl font-bold"
+                >
+                  Watch Demo
+                </motion.button>
+
+              </div>
+
+            </motion.div>
+
+            {/* RIGHT */}
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2 }}
+              className="relative"
+            >
+
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 5
+                }}
+                className="bg-white rounded-[2rem] shadow-2xl p-8 border border-orange-100 rotate-2 hover:rotate-0 transition duration-500"
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
+                  alt="Students creating batik art"
+                  className="rounded-2xl w-full h-[500px] object-cover"
+                />
+
+              </motion.div>
+
+              <div className="absolute -bottom-6 -left-6 bg-yellow-100 px-5 py-4 rounded-2xl shadow-lg">
+                <p className="font-bold text-xl">🌱 Eco-Friendly</p>
+              </div>
+
+              <div className="absolute -top-6 -right-6 bg-orange-100 px-5 py-4 rounded-2xl shadow-lg">
+                <p className="font-bold text-xl">🎨 Creative Learning</p>
+              </div>
+
+            </motion.div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ABOUT */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+
+          <h2 className="text-5xl md:text-6xl font-black mb-6">
+            The Spirit of Malaysia 🇲🇾
+          </h2>
+
+          <p className="max-w-4xl mx-auto text-xl text-gray-600 leading-relaxed">
+            Batik is more than art in Malaysia — it is part of our heritage and
+            national identity. CLAYTIK brings this cultural tradition into
+            modern classrooms through sustainability and innovation.
+          </p>
+
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {[
+            {
+              emoji: "🎨",
+              title: "Creativity",
+              desc: "Encourages students to express ideas through textile art."
+            },
+            {
+              emoji: "🧒",
+              title: "Safe Learning",
+              desc: "Replaces hot wax with eco-resist clay for safer learning."
+            },
+            {
+              emoji: "🌱",
+              title: "Sustainability",
+              desc: "Promotes environmentally friendly art practices."
+            }
+          ].map((item, index) => (
+
+            <motion.div
+              key={index}
+              whileHover={{ y: -15 }}
+              className="bg-white p-8 rounded-3xl shadow-2xl"
+            >
+
+              <div className="text-6xl mb-5">
+                {item.emoji}
+              </div>
+
+              <h3 className="text-3xl font-black mb-4">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {item.desc}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* PROBLEM & SOLUTION */}
+      <section className="bg-orange-500 text-white py-28 px-6">
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
+
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+
+            <h2 className="text-5xl font-black mb-10">
+              ⚠ The Problem
+            </h2>
+
+            <div className="space-y-6 text-lg leading-relaxed">
+
+              <div className="bg-white/10 p-6 rounded-3xl backdrop-blur-sm">
+                Traditional batik tools can be difficult and unsafe for young students.
+              </div>
+
+              <div className="bg-white/10 p-6 rounded-3xl backdrop-blur-sm">
+                Complex batik processes may limit creativity and confidence.
+              </div>
+
+              <div className="bg-white/10 p-6 rounded-3xl backdrop-blur-sm">
+                Many existing materials are not environmentally friendly.
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+
+            <h2 className="text-5xl font-black mb-10">
+              💡 Our Solution
+            </h2>
+
+            <div className="bg-white text-gray-800 p-10 rounded-[2rem] shadow-2xl">
+
+              <h3 className="text-4xl font-black text-orange-500 mb-5">
+                CLAYTIK
+              </h3>
+
+              <p className="text-xl leading-relaxed mb-8">
+                A student-friendly eco-resist clay that replaces hot wax in batik learning.
+              </p>
+
+              <ul className="space-y-5 text-lg">
+                <li>✅ Safer for students</li>
+                <li>✅ Easier to learn</li>
+                <li>✅ Encourages creativity</li>
+                <li>✅ Supports sustainable education</li>
+              </ul>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="max-w-7xl mx-auto px-6 py-28">
+
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+
+          <h2 className="text-6xl font-black mb-6">
+            How CLAYTIK Works
+          </h2>
+
+          <p className="text-xl text-gray-600">
+            A simple 3-step creative process.
+          </p>
+
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {[
+            {
+              emoji: "1️⃣",
+              title: "Apply Clay",
+              desc: "Students apply eco-resist clay onto fabric."
+            },
+            {
+              emoji: "2️⃣",
+              title: "Add Colours",
+              desc: "Students paint creatively using brushes and dyes."
+            },
+            {
+              emoji: "3️⃣",
+              title: "Reveal Art",
+              desc: "Unique batik-inspired patterns are revealed."
+            }
+          ].map((item, index) => (
+
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-yellow-100 to-orange-100 p-10 rounded-[2rem] shadow-2xl text-center"
+            >
+
+              <div className="text-7xl mb-8">
+                {item.emoji}
+              </div>
+
+              <h3 className="text-3xl font-black mb-5">
+                {item.title}
+              </h3>
+
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {item.desc}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* IMPACT */}
+      <section className="bg-gray-900 text-white py-28 px-6">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="text-center mb-20">
+
+            <h2 className="text-6xl font-black mb-6">
+              Impact & Sustainability
+            </h2>
+
+            <p className="text-2xl text-gray-300">
+              Empowering education while protecting the environment.
+            </p>
+
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {[
+              {
+                emoji: "👩‍🎓",
+                title: "Students",
+                items: [
+                  "Enhances creativity",
+                  "Builds confidence",
+                  "Encourages participation"
+                ]
+              },
+              {
+                emoji: "👩‍🏫",
+                title: "Teachers",
+                items: [
+                  "Simplifies teaching",
+                  "Creates safer classrooms",
+                  "Supports interaction"
+                ]
+              },
+              {
+                emoji: "🌍",
+                title: "Environment",
+                items: [
+                  "Eco-friendly materials",
+                  "Reduces harmful substances",
+                  "Encourages sustainability"
+                ]
+              }
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                whileHover={{ y: -10 }}
+                className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm"
+              >
+
+                <div className="text-6xl mb-6">
+                  {item.emoji}
+                </div>
+
+                <h3 className="text-3xl font-black mb-6">
+                  {item.title}
+                </h3>
+
+                <ul className="space-y-4 text-lg text-gray-300">
+
+                  {item.items.map((list, i) => (
+                    <li key={i}>• {list}</li>
+                  ))}
+
+                </ul>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+          <div className="mt-20 flex flex-wrap justify-center gap-6">
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-green-500/20 border border-green-400 px-8 py-5 rounded-2xl text-xl font-bold"
+            >
+              🌍 SDG 4: Quality Education
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-lime-500/20 border border-lime-400 px-8 py-5 rounded-2xl text-xl font-bold"
+            >
+              🌱 SDG 12: Responsible Consumption
+            </motion.div>
+
+          </div>
+
+        </div>
+
+      </section>
+{/* GALLERY */}
+<section className="max-w-7xl mx-auto px-6 py-28">
+
+  <motion.div
+    initial={{ opacity: 0, y: 80 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+    className="text-center mb-20"
+  >
+
+    <h2 className="text-6xl font-black mb-6">
+      Interactive Project Gallery 📸
+    </h2>
+
+    <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+      Explore the creative journey of CLAYTIK through hands-on learning,
+      artistic exploration, and sustainable innovation.
+    </p>
+
+  </motion.div>
+
+  <div className="grid md:grid-cols-3 gap-8">
+
+    {[
+      {
+        img: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1200&auto=format&fit=crop",
+        title: "Student Creativity",
+        desc: "Students experimenting with textile art using CLAYTIK."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+        title: "Hands-On Learning",
+        desc: "Interactive classroom activities that encourage participation."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+        title: "Sustainable Innovation",
+        desc: "Eco-friendly materials supporting greener art education."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
+        title: "Team Collaboration",
+        desc: "Students collaborating creatively through batik-inspired projects."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
+        title: "Creative Expression",
+        desc: "Encouraging imagination and confidence through art."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
+        title: "Future Education",
+        desc: "Transforming classrooms through innovation and sustainability."
+      }
+    ].map((item, index) => (
+
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        whileHover={{
+          y: -10,
+          scale: 1.03
+        }}
+        className="group bg-white rounded-[2rem] overflow-hidden shadow-2xl"
+      >
+
+        <div className="overflow-hidden">
+
+          <img
+            src={item.img}
+            alt={item.title}
+            className="h-[300px] w-full object-cover group-hover:scale-110 transition duration-700"
+          />
+
+        </div>
+
+        <div className="p-8">
+
+          <h3 className="text-3xl font-black mb-4">
+            {item.title}
+          </h3>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            {item.desc}
+          </p>
+
+        </div>
+
+      </motion.div>
+
+    ))}
+
+  </div>
+
+</section>
+      {/* UNIQUENESS */}
+      <section className="max-w-6xl mx-auto px-6 py-28">
+
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1200&auto=format&fit=crop"
+              alt="Creative textile artwork"
+              className="rounded-[2rem] shadow-2xl h-[550px] object-cover w-full"
+            />
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+
+            <h2 className="text-6xl font-black mb-10">
+              What Makes CLAYTIK Unique?
+            </h2>
+
+            <div className="space-y-6 text-lg leading-relaxed text-gray-700">
+
+              <div className="bg-orange-50 p-6 rounded-2xl border-l-4 border-orange-500">
+                🎨 Combines art, sustainability, and accessibility.
+              </div>
+
+              <div className="bg-yellow-50 p-6 rounded-2xl border-l-4 border-yellow-500">
+                🔥 Eliminates the use of hot wax.
+              </div>
+
+              <div className="bg-green-50 p-6 rounded-2xl border-l-4 border-green-500">
+                🌍 Encourages eco-friendly learning.
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-500">
+                🤝 Suitable for beginners and all students.
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="relative overflow-hidden py-32 px-6 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-400 text-white text-center">
+
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white,transparent_60%)]"></div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          viewport={{ once: true }}
+          className="relative z-10 max-w-5xl mx-auto"
+        >
+
+          <h2 className="text-6xl md:text-7xl font-black leading-tight mb-10">
+            Transforming Art Education
+            For A Better Future ✨
+          </h2>
+
+          <p className="text-2xl leading-relaxed mb-12">
+            We believe learning should be meaningful, creative, and sustainable.
+            Join us in empowering the next generation through innovative art education.
+          </p>
+
+          <motion.button
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 0px 40px rgba(255,255,255,0.5)"
+            }}
+            className="bg-white text-orange-500 px-12 py-6 rounded-3xl text-2xl font-black shadow-2xl"
+          >
+            Join The Innovation
+          </motion.button>
+
+        </motion.div>
+
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black text-white py-12 text-center">
+
+        <h3 className="text-4xl font-black mb-4">
+          ✨ CLAYTIK ✨
+        </h3>
+
+        <p className="text-gray-400 text-lg">
+          Create • Innovate • Sustain
+        </p>
+
+      </footer>
+
+    </div>
+  );
+}
