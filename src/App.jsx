@@ -313,104 +313,137 @@ export default function ClaytikWebsite() {
 
       </section>
 
-      {/* IMPACT */}
-      <section className="bg-gray-900 text-white py-28 px-6">
+{/* IMPACT DATA DASHBOARD */}
+<section className="bg-gray-900 text-white py-28 px-6">
 
-        <div className="max-w-7xl mx-auto">
+  <div className="max-w-7xl mx-auto">
 
-          <div className="text-center mb-20">
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="text-center mb-20"
+    >
+      <h2 className="text-6xl font-black mb-6">
+        CLAYTIK Impact Data 📊
+      </h2>
 
-            <h2 className="text-6xl font-black mb-6">
-              Impact & Sustainability
-            </h2>
+      <p className="text-2xl text-gray-300">
+        Measured impact across students, teachers, environment, and community
+      </p>
+    </motion.div>
 
-            <p className="text-2xl text-gray-300">
-              Empowering education while protecting the environment.
+    {/* OVERALL STATS */}
+    <div className="grid md:grid-cols-4 gap-8 mb-20">
+
+      {[
+        { number: "120", label: "Students" },
+        { number: "3", label: "Teachers" },
+        { number: "93%", label: "Overall Project Impact" },
+        { number: "100%", label: "Teacher Satisfaction" }
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ scale: 1.05 }}
+          className="bg-white/5 p-8 rounded-3xl text-center shadow-xl"
+        >
+          <h3 className="text-5xl font-black text-orange-400 mb-4">
+            {item.number}
+          </h3>
+          <p className="text-xl text-gray-300">
+            {item.label}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* STUDENT IMPACT */}
+    <div className="mb-20">
+      <h3 className="text-4xl font-black text-orange-400 mb-8">
+        Student Impact
+      </h3>
+
+      <div className="grid md:grid-cols-3 gap-8">
+
+        {[
+          { title: "Safety Improvement", value: "96%" },
+          { title: "Creativity Enhancement", value: "92%" },
+          { title: "Active Participation", value: "95%" },
+          { title: "Confidence Growth", value: "88%" },
+          { title: "Inclusive Learning", value: "97%" },
+          { title: "STEM Improvement", value: "89%" }
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ y: -8 }}
+            className="bg-orange-500/10 border border-orange-400/30 p-6 rounded-2xl"
+          >
+            <h4 className="text-2xl font-bold mb-3">
+              {item.title}
+            </h4>
+            <p className="text-5xl font-black text-orange-300">
+              {item.value}
             </p>
+          </motion.div>
+        ))}
 
-          </div>
+      </div>
+    </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+    {/* ENVIRONMENT + COMMUNITY */}
+    <div className="grid md:grid-cols-2 gap-10 mb-20">
 
-            {[
-              {
-                emoji: "👩‍🎓",
-                title: "Students",
-                items: [
-                  "Enhances creativity",
-                  "Builds confidence",
-                  "Encourages participation"
-                ]
-              },
-              {
-                emoji: "👩‍🏫",
-                title: "Teachers",
-                items: [
-                  "Simplifies teaching",
-                  "Creates safer classrooms",
-                  "Supports interaction"
-                ]
-              },
-              {
-                emoji: "🌍",
-                title: "Environment",
-                items: [
-                  "Eco-friendly materials",
-                  "Reduces harmful substances",
-                  "Encourages sustainability"
-                ]
-              }
-            ].map((item, index) => (
+      <div className="bg-green-500/10 p-8 rounded-3xl">
+        <h3 className="text-4xl font-black text-green-400 mb-6">
+          Environment Impact 🌱
+        </h3>
 
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm"
-              >
+        <ul className="space-y-4 text-xl">
+          <li>85% reduction in hot wax usage</li>
+          <li>80% lower energy use</li>
+          <li>90% cleaner classroom environment</li>
+          <li>93% eco-awareness improvement</li>
+        </ul>
+      </div>
 
-                <div className="text-6xl mb-6">
-                  {item.emoji}
-                </div>
+      <div className="bg-yellow-500/10 p-8 rounded-3xl">
+        <h3 className="text-4xl font-black text-yellow-400 mb-6">
+          Community Impact 🤝
+        </h3>
 
-                <h3 className="text-3xl font-black mb-6">
-                  {item.title}
-                </h3>
+        <ul className="space-y-4 text-xl">
+          <li>5 workshops conducted</li>
+          <li>80+ participants engaged</li>
+          <li>91% cultural appreciation</li>
+          <li>87% innovation interest</li>
+        </ul>
+      </div>
 
-                <ul className="space-y-4 text-lg text-gray-300">
+    </div>
 
-                  {item.items.map((list, i) => (
-                    <li key={i}>• {list}</li>
-                  ))}
+    {/* TEACHER IMPACT */}
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="bg-white text-gray-900 rounded-3xl p-12 text-center"
+    >
+      <h3 className="text-5xl font-black text-green-600 mb-6">
+        Teacher Satisfaction
+      </h3>
 
-                </ul>
+      <p className="text-8xl font-black mb-6">
+        100%
+      </p>
 
-              </motion.div>
+      <p className="text-2xl leading-relaxed">
+        All 3 teachers strongly agreed that CLAYTIK is effective,
+        safe, easy to implement, and improves classroom learning.
+      </p>
+    </motion.div>
 
-            ))}
+  </div>
 
-          </div>
-
-          <div className="mt-20 flex flex-wrap justify-center gap-6">
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-green-500/20 border border-green-400 px-8 py-5 rounded-2xl text-xl font-bold"
-            >
-              🌍 SDG 4: Quality Education
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-lime-500/20 border border-lime-400 px-8 py-5 rounded-2xl text-xl font-bold"
-            >
-              🌱 SDG 12: Responsible Consumption
-            </motion.div>
-
-          </div>
-
-        </div>
-
-      </section>
+</section>
 {/* GALLERY */}
 <section className="max-w-7xl mx-auto px-6 py-28">
 
@@ -437,12 +470,12 @@ export default function ClaytikWebsite() {
 
     {[
       {
-        img: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1200&auto=format&fit=crop",
+        img: "/students2.jpeg",
         title: "Student Creativity",
         desc: "Students experimenting with textile art using CLAYTIK."
       },
       {
-        img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+        img: "/students1.jpeg",
         title: "Hands-On Learning",
         desc: "Interactive classroom activities that encourage participation."
       },
