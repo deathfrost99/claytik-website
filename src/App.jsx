@@ -25,7 +25,7 @@ export default function ClaytikWebsite() {
             >
 
               <p className="uppercase tracking-[0.4em] text-orange-500 font-bold mb-6">
-                International Innovation Fair 2026
+                World Cup Innovation 2026
               </p>
 
               <h1 className="text-6xl md:text-8xl font-black leading-tight mb-6">
