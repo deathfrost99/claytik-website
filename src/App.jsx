@@ -84,7 +84,7 @@ export default function ClaytikWebsite() {
               >
 
                 <img
-                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
+                  src="/team collab.jpeg"
                   alt="Students creating batik art"
                   className="rounded-2xl w-full h-[500px] object-cover"
                 />
@@ -267,49 +267,58 @@ export default function ClaytikWebsite() {
 
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-3 gap-8">
+  {[
+    {
+      media: "/apply clay.jpeg",
+      type: "image",
+      title: "Apply Clay",
+      desc: "Students apply eco-resist clay onto fabric."
+    },
+    {
+      media: "/add color.mp4",
+      type: "video",
+      title: "Add Colours",
+      desc: "Students paint creatively using brushes and dyes."
+    },
+    {
+      media: "/reveal art.jpeg",
+      type: "image",
+      title: "Reveal Art",
+      desc: "Unique batik-inspired patterns are revealed."
+    }
+  ].map((step, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ scale: 1.05 }}
+      className="bg-white rounded-3xl shadow-xl overflow-hidden"
+    >
+      <div className="h-64 overflow-hidden">
+        {step.type === "video" ? (
+          <video
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-fill"
+          >
+            <source src={step.media} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={step.media}
+            alt={step.title}
+            className="w-full h-full object-cover"
+          />
+        )}
+      </div>
 
-          {[
-            {
-              emoji: "1️⃣",
-              title: "Apply Clay",
-              desc: "Students apply eco-resist clay onto fabric."
-            },
-            {
-              emoji: "2️⃣",
-              title: "Add Colours",
-              desc: "Students paint creatively using brushes and dyes."
-            },
-            {
-              emoji: "3️⃣",
-              title: "Reveal Art",
-              desc: "Unique batik-inspired patterns are revealed."
-            }
-          ].map((item, index) => (
-
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-br from-yellow-100 to-orange-100 p-10 rounded-[2rem] shadow-2xl text-center"
-            >
-
-              <div className="text-7xl mb-8">
-                {item.emoji}
-              </div>
-
-              <h3 className="text-3xl font-black mb-5">
-                {item.title}
-              </h3>
-
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {item.desc}
-              </p>
-
-            </motion.div>
-
-          ))}
-
-        </div>
+      <div className="p-6">
+        <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
+        <p className="text-gray-600">{step.desc}</p>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
       </section>
 
@@ -485,17 +494,17 @@ export default function ClaytikWebsite() {
         desc: "Eco-friendly materials supporting greener art education."
       },
       {
-        img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
+        img: "/team collab.jpeg",
         title: "Team Collaboration",
         desc: "Students collaborating creatively through batik-inspired projects."
       },
       {
-        img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
+        img: "/creative ex.jpeg",
         title: "Creative Expression",
         desc: "Encouraging imagination and confidence through art."
       },
       {
-        img: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
+        img: "/future edu.jpeg",
         title: "Future Education",
         desc: "Transforming classrooms through innovation and sustainability."
       }
