@@ -9,9 +9,9 @@ export default function ClaytikWebsite() {
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#f59e0b20,transparent_40%)]"></div>
 
-        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-24 relative z-10">
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
 
             {/* LEFT */}
             <motion.div
@@ -24,20 +24,20 @@ export default function ClaytikWebsite() {
                 World Cup Innovation 2026
               </p>
 
-              <h1 className="text-6xl md:text-8xl font-black leading-tight mb-6">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl sm:text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl md:text-3xl sm:text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl lg:text-6xl lg:text-8xl font-black leading-tight mb-6">
                 ✨ CLAYTIK
               </h1>
 
-              <span className="block text-orange-500 text-3xl md:text-5xl font-black mb-8">
+              <span className="block text-orange-500 text-xl sm:text-2xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl font-black mb-8">
                 Create • Innovate • Sustain
               </span>
 
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-700 mb-10">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-700 mb-10">
                 An eco-friendly innovation that transforms batik learning into a
                 fun, safe, and creative hands-on experience for students.
               </p>
 
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-col sm:flex-row gap-4">
 
                 <motion.button
                   whileHover={{
@@ -45,7 +45,7 @@ export default function ClaytikWebsite() {
                     boxShadow: "0px 0px 40px rgba(249,115,22,0.5)"
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-orange-500 hover:bg-orange-600 transition text-white px-8 py-5 rounded-2xl font-bold shadow-2xl"
+                  className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-3 sm:px-4 sm:px-6 md:px-8 sm:py-4 md:px-8 md:py-5 rounded-2xl font-bold shadow-2xl"
                 >
                   Explore CLAYTIK
                 </motion.button>
@@ -53,7 +53,7 @@ export default function ClaytikWebsite() {
                 <motion.button
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-100 transition px-8 py-5 rounded-2xl font-bold"
+                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-100 transition px-5 py-3 sm:px-4 sm:px-6 md:px-8 sm:py-4 md:px-8 md:py-5 rounded-2xl font-bold"
                 >
                   Watch Demo
                 </motion.button>
@@ -82,16 +82,16 @@ export default function ClaytikWebsite() {
                 <img
                   src="/team collab.jpeg"
                   alt="Students creating batik art"
-                  className="rounded-2xl w-full h-[500px] object-cover"
+                  className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[500px] object-cover"
                 />
 
               </motion.div>
 
-              <div className="absolute -bottom-6 -left-6 bg-yellow-100 px-5 py-4 rounded-2xl shadow-lg">
+              <div className="absolute bottom-2 left-2 sm:-bottom-6 sm:-left-6 bg-yellow-100 px-5 py-4 rounded-2xl shadow-lg">
                 <p className="font-bold text-xl">🌱 Eco-Friendly</p>
               </div>
 
-              <div className="absolute -top-6 -right-6 bg-orange-100 px-5 py-4 rounded-2xl shadow-lg">
+              <div className="absolute top-2 right-2 sm:-top-6 sm:-right-6 bg-orange-100 px-5 py-4 rounded-2xl shadow-lg">
                 <p className="font-bold text-xl">🎨 Creative Learning</p>
               </div>
 
@@ -104,7 +104,7 @@ export default function ClaytikWebsite() {
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-24">
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -114,7 +114,7 @@ export default function ClaytikWebsite() {
           className="text-center mb-16"
         >
 
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl md:text-6xl font-black mb-6">
             The Spirit of Malaysia 🇲🇾
           </h2>
 
@@ -126,7 +126,7 @@ export default function ClaytikWebsite() {
 
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
           {[
             {
@@ -173,9 +173,9 @@ export default function ClaytikWebsite() {
       </section>
 
       {/* PROBLEM & SOLUTION */}
-      <section className="bg-orange-500 text-white py-28 px-6">
+      <section className="bg-orange-500 text-white py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-8">
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14">
 
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -184,7 +184,7 @@ export default function ClaytikWebsite() {
             viewport={{ once: true }}
           >
 
-            <h2 className="text-5xl font-black mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl font-black mb-10">
               ⚠ The Problem
             </h2>
 
@@ -213,13 +213,13 @@ export default function ClaytikWebsite() {
             viewport={{ once: true }}
           >
 
-            <h2 className="text-5xl font-black mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl font-black mb-10">
               💡 Our Solution
             </h2>
 
             <div className="bg-white text-gray-800 p-10 rounded-[2rem] shadow-2xl">
 
-              <h3 className="text-4xl font-black text-orange-500 mb-5">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-orange-500 mb-5">
                 CLAYTIK
               </h3>
 
@@ -243,7 +243,7 @@ export default function ClaytikWebsite() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="max-w-7xl mx-auto px-6 py-28">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-28">
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -263,7 +263,7 @@ export default function ClaytikWebsite() {
 
         </motion.div>
 
-<div className="grid md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
   {[
     {
       media: "/apply clay.jpeg",
@@ -289,7 +289,7 @@ export default function ClaytikWebsite() {
       whileHover={{ scale: 1.05 }}
       className="bg-white rounded-3xl shadow-xl overflow-hidden"
     >
-      <div className="h-64 overflow-hidden">
+      <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
         {step.type === "video" ? (
           <video
             autoPlay
@@ -319,7 +319,7 @@ export default function ClaytikWebsite() {
       </section>
 
 {/* IMPACT DATA DASHBOARD */}
-<section className="bg-gray-900 text-white py-28 px-6">
+<section className="bg-gray-900 text-white py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-8">
 
   <div className="max-w-7xl mx-auto">
 
@@ -340,7 +340,7 @@ export default function ClaytikWebsite() {
     </motion.div>
 
     {/* OVERALL STATS */}
-    <div className="grid md:grid-cols-4 gap-8 mb-20">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
 
       {[
         { number: "120", label: "Students" },
@@ -353,7 +353,7 @@ export default function ClaytikWebsite() {
           whileHover={{ scale: 1.05 }}
           className="bg-white/5 p-8 rounded-3xl text-center shadow-xl"
         >
-          <h3 className="text-5xl font-black text-orange-400 mb-4">
+          <h3 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl font-black text-orange-400 mb-4">
             {item.number}
           </h3>
           <p className="text-xl text-gray-300">
@@ -365,11 +365,11 @@ export default function ClaytikWebsite() {
 
     {/* STUDENT IMPACT */}
     <div className="mb-20">
-      <h3 className="text-4xl font-black text-orange-400 mb-8">
+      <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-orange-400 mb-8">
         Student Impact
       </h3>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
         {[
           { title: "Safety Improvement", value: "96%" },
@@ -387,7 +387,7 @@ export default function ClaytikWebsite() {
             <h4 className="text-2xl font-bold mb-3">
               {item.title}
             </h4>
-            <p className="text-5xl font-black text-orange-300">
+            <p className="text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl font-black text-orange-300">
               {item.value}
             </p>
           </motion.div>
@@ -397,10 +397,10 @@ export default function ClaytikWebsite() {
     </div>
 
     {/* ENVIRONMENT + COMMUNITY */}
-    <div className="grid md:grid-cols-2 gap-10 mb-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
 
       <div className="bg-green-500/10 p-8 rounded-3xl">
-        <h3 className="text-4xl font-black text-green-400 mb-6">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-green-400 mb-6">
           Environment Impact 🌱
         </h3>
 
@@ -413,7 +413,7 @@ export default function ClaytikWebsite() {
       </div>
 
       <div className="bg-yellow-500/10 p-8 rounded-3xl">
-        <h3 className="text-4xl font-black text-yellow-400 mb-6">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-yellow-400 mb-6">
           Community Impact 🤝
         </h3>
 
@@ -432,11 +432,11 @@ export default function ClaytikWebsite() {
       whileHover={{ scale: 1.02 }}
       className="bg-white text-gray-900 rounded-3xl p-12 text-center"
     >
-      <h3 className="text-5xl font-black text-green-600 mb-6">
+      <h3 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:text-5xl font-black text-green-600 mb-6">
         Teacher Satisfaction
       </h3>
 
-      <p className="text-8xl font-black mb-6">
+      <p className="text-5xl sm:text-6xl md:text-8xl font-black mb-6">
         100%
       </p>
 
@@ -450,7 +450,7 @@ export default function ClaytikWebsite() {
 
 </section>
 {/* GALLERY */}
-<section className="max-w-7xl mx-auto px-6 py-28">
+<section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-28">
 
   <motion.div
     initial={{ opacity: 0, y: 80 }}
@@ -471,7 +471,7 @@ export default function ClaytikWebsite() {
 
   </motion.div>
 
-  <div className="grid md:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
     {[
       {
@@ -524,7 +524,7 @@ export default function ClaytikWebsite() {
           <img
             src={item.img}
             alt={item.title}
-            className="h-[300px] w-full object-cover group-hover:scale-110 transition duration-700"
+            className="h-[220px] sm:h-[260px] md:h-[300px] w-full object-cover group-hover:scale-110 transition duration-700"
           />
 
         </div>
@@ -549,9 +549,9 @@ export default function ClaytikWebsite() {
 
 </section>
       {/* UNIQUENESS */}
-      <section className="max-w-6xl mx-auto px-6 py-28">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-28">
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
 
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -606,7 +606,7 @@ export default function ClaytikWebsite() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="relative overflow-hidden py-32 px-6 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-400 text-white text-center">
+      <section className="relative overflow-hidden py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-400 text-white text-center">
 
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white,transparent_60%)]"></div>
 
@@ -645,7 +645,7 @@ export default function ClaytikWebsite() {
       {/* FOOTER */}
       <footer className="bg-black text-white py-12 text-center">
 
-        <h3 className="text-4xl font-black mb-4">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4">
           ✨ CLAYTIK ✨
         </h3>
 
