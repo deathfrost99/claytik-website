@@ -24,7 +24,7 @@ export default function ClaytikWebsite() {
                 World Cup Innovation 2026
               </p>
 
-              <h1 className="text-5xl sm:text-2xl md:text-4xl lg:text-8xl font-black leading-tight mb-6">
+              <h1 className="text-5xl sm:text-2xl md:text-4xl lg:text-6xl font-black leading-tight mb-6">
                 ✨ CLAYTIK
               </h1>
 
