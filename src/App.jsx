@@ -4,10 +4,6 @@ export default function ClaytikWebsite() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-yellow-50 to-white text-gray-800 overflow-hidden">
 
-      {/* FLOATING BACKGROUND */}
-      <div className="fixed top-20 left-10 w-72 h-72 bg-orange-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-      <div className="fixed bottom-10 right-10 w-72 h-72 bg-yellow-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-
       {/* HERO SECTION */}
       <section className="relative overflow-hidden min-h-screen flex items-center">
 
