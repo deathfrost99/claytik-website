@@ -625,16 +625,7 @@ export default function ClaytikWebsite() {
             We believe learning should be meaningful, creative, and sustainable.
             Join us in empowering the next generation through innovative art education.
           </p>
-
-          <motion.button
-            whileHover={{
-              scale: 1.08,
-              boxShadow: "0px 0px 40px rgba(255,255,255,0.5)"
-            }}
-            className="bg-white text-orange-500 px-12 py-6 rounded-3xl text-2xl font-black shadow-2xl"
-          >
-            Join The Innovation
-          </motion.button>
+          
 
         </motion.div>
 
