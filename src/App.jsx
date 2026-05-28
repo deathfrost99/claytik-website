@@ -39,24 +39,22 @@ export default function ClaytikWebsite() {
 
               <div className="flex flex-col sm:flex-row gap-4">
 
-                <motion.button
-                  whileHover={{
-                    scale: 1.08,
-                    boxShadow: "0px 0px 40px rgba(249,115,22,0.5)"
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-3 sm:px-4 sm:px-6 md:px-8 sm:py-4 md:px-8 md:py-5 rounded-2xl font-bold shadow-2xl"
-                >
-                  Explore CLAYTIK
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.08 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-100 transition px-5 py-3 sm:px-4 sm:px-6 md:px-8 sm:py-4 md:px-8 md:py-5 rounded-2xl font-bold"
-                >
-                  Watch Demo
-                </motion.button>
+ <a
+  href="https://youtu.be/dpLxiXLFTmE"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <motion.button
+    whileHover={{
+      scale: 1.08,
+      boxShadow: "0px 0px 40px rgba(249,115,22,0.5)"
+    }}
+    whileTap={{ scale: 0.95 }}
+    className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-3 sm:px-4 sm:px-6 md:px-8 sm:py-4 md:py-5 rounded-2xl font-bold shadow-2xl"
+  >
+    Explore CLAYTIK
+  </motion.button>
+</a>
 
               </div>
 
