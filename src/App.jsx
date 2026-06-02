@@ -640,12 +640,12 @@ export default function ClaytikWebsite() {
     href="https://chatgpt.com/g/g-6a1eba7a538c81918b4e5f48ee414669-claytik-batik-designer"
     target="_blank"
     rel="noopener noreferrer"
-    className="bg-orange-500 hover:bg-orange-600 text-white w-40 h-40 rounded-full flex items-center justify-center shadow-2xl text-4xl transition hover:scale-110"
+    className="bg-orange-500 hover:bg-orange-600 text-white w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full flex items-center justify-center shadow-2xl text-4xl transition hover:scale-110"
   >
     <img
   src="/claytik ai.png"
   alt="CLAYTIK AI"
-  className="w-40 h-40"
+  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full"
 />
   </a>
 </div>
