@@ -630,6 +630,25 @@ export default function ClaytikWebsite() {
         </motion.div>
 
       </section>
+      {/* CHATBOT */}
+<div className="fixed bottom-6 left-6 z-[9999] flex flex-col items-center gap-2">
+  <div className="bg-white text-gray-800 px-4 py-2 rounded-full shadow-xl font-bold text-sm">
+    Ask CLAYTIK AI
+  </div>
+
+  <a
+    href="https://chatgpt.com/g/g-6a1eba7a538c81918b4e5f48ee414669-claytik-batik-designer"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-orange-500 hover:bg-orange-600 text-white w-40 h-40 rounded-full flex items-center justify-center shadow-2xl text-4xl transition hover:scale-110"
+  >
+    <img
+  src="/claytik ai.png"
+  alt="CLAYTIK AI"
+  className="w-40 h-40"
+/>
+  </a>
+</div>
 
       {/* FOOTER */}
       <footer className="bg-black text-white py-12 text-center">
